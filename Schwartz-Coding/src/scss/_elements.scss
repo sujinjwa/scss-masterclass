@@ -1,0 +1,19 @@
+%categoryTitle {
+  font-weight: 500;
+  font-size: 22px;
+}
+
+%btn {
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+  transition: all 0.2s ease-in;
+  background-color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: 0.5px solid #dadada;
+  font-weight: 550;
+  font-size: $fontMedium - 10px;
+}
