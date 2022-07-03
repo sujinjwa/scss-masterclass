@@ -1,0 +1,41 @@
+.hero {
+  width: 80%;
+  height: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("https://cdn.shopify.com/s/files/1/0086/4865/4895/files/custom_resized_84b24d6e-ed8a-45f1-8c57-ff456232f6c2_1600x929_crop_center.jpg?v=1651509181");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0;
+  margin: 0px 140px;
+  margin-bottom: 80px;
+  h4 {
+    margin: 3rem 0;
+    font-size: 0.75em;
+    @extend %miniTitle;
+  }
+  h3 {
+    margin-bottom: 3rem;
+    width: 50%;
+    font-size: 3em;
+    text-align: center;
+  }
+  a {
+    margin-bottom: 4rem;
+    padding: 2em 6em;
+    border: 1px solid white;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    @extend %miniTitle;
+    transition: color 0.1s linear, background 0.1s linear;
+    &:hover {
+      background-color: white;
+      color: $grey;
+    }
+  }
+}

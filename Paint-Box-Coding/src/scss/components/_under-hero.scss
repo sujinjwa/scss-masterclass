@@ -1,0 +1,42 @@
+.under-hero {
+  // height: 80vh;
+  display: flex;
+  width: 100%;
+  margin-bottom: 80px;
+  .under-hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $bg;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      h3 {
+        font-size: 2.188em;
+        width: 150%;
+        text-align: center;
+        margin-bottom: 1em;
+      }
+      a {
+        border: 1px solid $grey;
+        padding: 2em 4em;
+        background: none;
+        @extend %miniTitle;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.1s linear;
+        &:hover {
+          color: white;
+          background-color: $grey;
+        }
+      }
+    }
+  }
+  img,
+  div {
+    width: 50%;
+  }
+}

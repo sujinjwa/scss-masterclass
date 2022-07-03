@@ -1,0 +1,91 @@
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0px 140px;
+  background-color: white;
+  height: 70px; // 이 부분을 고쳐야 할 것 같음!!!
+  width: 100%;
+  display: flex;
+  align-items: center;
+  nav {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .mainmenu {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      font-size: 10px;
+      letter-spacing: 2px;
+      & > li {
+        &:hover {
+          & > a {
+            color: rgba(1, 1, 1, 0.5);
+          }
+        }
+        padding: 10px 40px;
+        // height: 100%;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        .submenu {
+          &.active {
+            opacity: 1;
+            visibility: visible;
+            // display: block;  => display로 설정해두면, transition + transform 적용 불가능
+            transform: translateY(0px);
+          }
+          transform: translateY(-10px);
+          transition: all 0.2s linear;
+          opacity: 0;
+          visibility: hidden;
+          // display: none;
+          background-color: $beige;
+          position: fixed;
+          top: 0;
+          left: 0;
+          margin-top: 70px;
+          width: 100vw;
+          padding: 50px 150px;
+          li {
+            padding: 5px 0px;
+            margin: 10px 0px;
+            font-size: 30px;
+            font-family: "Cormorant Garamond";
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: capitalize;
+          }
+        }
+        a {
+          text-decoration-line: none;
+        }
+        cursor: pointer;
+        @extend %miniTitle;
+      }
+      &:first-child {
+        & > li:first-child {
+          padding-left: 10px;
+        }
+      }
+      &:last-child {
+        & > li {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  button {
+    display: none;
+    outline: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}
